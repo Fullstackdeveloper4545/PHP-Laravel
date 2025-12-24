@@ -4,7 +4,6 @@
 @source '../../storage/framework/views/*.php';
 @source '../**/*.blade.php';
 @source '../**/*.js';
-
 @theme {
     --font-sans: 'Sora', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
@@ -160,6 +159,59 @@
         opacity: 0.6;
         flex: 0 0 auto;
     }
+
+    .timeline-rail {
+        position: relative;
+        width: 3px;
+        min-height: 320px;
+        background: rgba(255, 255, 255, 0.18);
+        margin-top: 6px;
+    }
+
+    .timeline-fill {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 3px;
+        height: 0%;
+        background: #b44bd0;
+    }
+
+    .timeline-dot {
+        position: absolute;
+        left: -12px;
+        width: 28px;
+        height: 28px;
+        border-radius: 999px;
+        background: #2a2d35;
+        color: #dfe2ea;
+        font-size: 11px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: background 0.2s ease-out, color 0.2s ease-out;
+    }
+
+    .timeline-dot[data-step='1'] {
+        top: 0;
+    }
+
+    .timeline-dot[data-step='2'] {
+        top: 48%;
+    }
+
+    .timeline-dot[data-step='3'] {
+        bottom: 0;
+    }
+
+    .timeline-dot.is-active {
+        background: #b44bd0;
+        color: #fff;
+        box-shadow: 0 0 0 4px rgba(180, 75, 208, 0.2);
+    }
+
 
     .card {
     backdrop-filter: blur(11px) saturate(156%);

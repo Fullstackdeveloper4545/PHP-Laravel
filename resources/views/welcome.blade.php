@@ -17,6 +17,10 @@
             <x-hero />
             <x-logos />
             <x-features />
+            <x-container-single />
+            <x-about />
+            <x-text-image />
+            <x-split-section />
             <x-footer />
         </div>
 
