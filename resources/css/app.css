@@ -54,29 +54,35 @@
         color: #ffffff;
     }
 
-    .sign-in-flare {
-        position: relative;
-        overflow: hidden;
-    }
+.sign-in-flare {
+    position: relative;
+    overflow: hidden;
+}
 
-    .sign-in-flare::before {
-        content: '';
-        position: absolute;
-        inset: -60%;
-        border-radius: 999px;
-        background: conic-gradient(from 0deg, transparent 0deg, transparent 300deg, rgba(255, 255, 255, 0.9) 330deg, transparent 360deg);
-        animation: sign-in-orbit 2.8s linear infinite;
-        opacity: 0.7;
-    }
+.sign-in-flare::before {
+    content: '';
+    position: absolute;
+    inset: -60%;
+    border-radius: 999px;
+    background: conic-gradient(
+        from 0deg,
+        transparent 0deg,
+        transparent 300deg,
+        rgba(255, 255, 255, 0.9) 330deg,
+        transparent 360deg
+    );
+    animation: sign-in-orbit 2.8s linear infinite;
+    opacity: 0.7;
+}
 
-    .sign-in-flare::after {
-        content: '';
-        position: absolute;
-        inset: 1px;
-        border-radius: 999px;
-        background: #111216;
-        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
-    }
+.sign-in-flare::after {
+    content: '';
+    position: absolute;
+    inset: 1px;
+    border-radius: 999px;
+    background: #111216;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
 
     .sign-in-flare > span {
         position: relative;
@@ -110,6 +116,50 @@
         max-width: none;
         opacity: 1;
     }
+
+    .hero-lines-bottom-static {
+        width: 100%;
+        max-width: none;
+        opacity: 1;
+        margin-top: -20px;
+    }
+
+    .hero-lines-wrap {
+        position: relative;
+        width: 100%;
+    }
+
+    .hero-gradient-image {
+        position: absolute;
+        top: 250px;
+        left: 50%;
+        right: 60%;
+        width: 100%;
+        height: 920px;
+        transform: translateX(-50%);
+        object-fit: cover;
+        opacity: 0.6;
+    }
+
+    .logo-marquee {
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .logo-marquee__track {
+        display: inline-flex;
+        align-items: center;
+        gap: 120px;
+        width: max-content;
+        animation: logo-marquee 18s linear infinite;
+        will-change: transform;
+    }
+
+    .logo-marquee__logo {
+        height: 40px;
+        opacity: 0.6;
+        flex: 0 0 auto;
+    }
 }
 
 @keyframes sign-in-orbit {
@@ -140,5 +190,14 @@
     100% {
         transform: translateX(-50%) translateY(-36px);
         opacity: 0.2;
+    }
+}
+
+@keyframes logo-marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
     }
 }
