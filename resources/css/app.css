@@ -160,6 +160,14 @@
         opacity: 0.6;
         flex: 0 0 auto;
     }
+
+    .card {
+    backdrop-filter: blur(11px) saturate(156%);
+    -webkit-backdrop-filter: blur(11px) saturate(156%);
+    background-color: rgba(255, 255, 255, 0.28);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
 }
 
 @keyframes sign-in-orbit {
